@@ -1,0 +1,45 @@
+  <!-- <a class="nav-link" routerLink="/students">Add Student</a> -->
+  <button class="btn btn-primary " (click)="goToAdd()">Add </button>
+<table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <!-- {{allStudents()}}   -->
+      <tr>
+            <th>ID</th>
+            <th>Nzmd</th>
+            <th>department</th>
+            <!-- <th>image</th> -->
+            <th>Action</th>
+  
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of students">
+            <td>{{item._id}}</td>  
+            <td>{{item.name}}</td>
+            <td>{{item.department}}</td>
+            <!-- <td>{{item.image}}</td> -->
+             <td>
+                <!-- <button class="btn btn-primary" (click)="show(item)">show</button>
+                <button class="btn btn-danger" (click)="delete(item)">Delete</button>
+                <button class="btn btn-warning" (click)="edit(item)">Edit</button> -->
+                <a routerLink="/students/details/{{item._id}}" class="btn btn-primary">show</a>
+                <a routerLink="/students/edit/{{item._id}}" class="btn btn-warning">Edit</a>
+                <a class="btn btn-danger" routerLink="/students/delete/{{item._id}}">Delete</a>
+
+                <!-- <button class="btn btn-danger" (click)="delete(item)">Delete</button> -->
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+  <router-outlet></router-outlet>
+  
+  <!-- <div class="container" *ngIf="eflag">
+    <form>
+      Name : <input type="text" name="name" id="name" [(ngModel)]="nstd.name"><br>
+      Age : <input type="number" name="age" id="age" [(ngModel)]="nstd.age"><br>
+      <button type="submit" (click)="submit()"> submit</button>
+    </form>
+  </div> -->
+  
+  

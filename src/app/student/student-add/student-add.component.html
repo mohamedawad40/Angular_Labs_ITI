@@ -1,0 +1,41 @@
+<!-- <p>student-add works!</p> -->
+<!-- <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary" (click)="showform()">Add Student</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="text" class="form-control" id="id" [(ngModel)]="nstd._id">
+  </div>
+  
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="nstd.name">
+  </div>
+  
+  <!-- <div class="form-group">
+    <label for="department">department</label>
+    <input type="text" class="form-control" id="age" [(ngModel)]="nstd.department">
+  </div> -->
+  <div class="form-group">
+  <label for="" class="form-label mt-2 ">Department</label>
+  <select class="form-select" [(ngModel)]="nstd.department" name="department">
+    <option value="1">OS</option>
+    <option value="2">AI</option>
+    <option value="3">mobile</option>
+  </select>
+
+  <!-- <label for="" class="form-label">Image</label>
+    <input type="file" (change)="onFileSelect($event)" class="form-control" name="image" /> -->
+
+  <button type="button" class="btn btn-primary" (click)="save()">Add</button>
+  
+</div>
+
+
+

@@ -1,0 +1,19 @@
+<p>department-update works!</p>
+<!-- edit-Department.component.html -->
+
+<div class="container">
+    <h2>Edit Department</h2>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="std.name" required>
+      </div>
+      <div>
+        <select [(ngModel)]="std.location" class="form-control">
+          <option>Alex</option>
+          <option>Smart</option>
+          <option>Mansoura</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="saveChanges()">Save</button>
+  </div>
+  

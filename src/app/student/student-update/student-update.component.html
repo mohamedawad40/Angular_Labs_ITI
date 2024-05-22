@@ -1,0 +1,23 @@
+<p>student-update works!</p>
+<!-- edit-student.component.html -->
+
+<div class="container">
+    <h2>Edit Student</h2>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="std.name" required>
+      </div>
+      <div class="form-group">
+        <label for="department" class="form-label mt-2">Department</label>
+        <select class="form-select" name="department" (change)="onDepartmentChange($event)">
+          <option value="1" [selected]="std.department === 1">OS</option>
+          <option value="2" [selected]="std.department === 2">AI</option>
+          <option value="3" [selected]="std.department === 3">Mobile</option>
+        </select>
+      </div>
+      <!-- <label for="image" class="form-label">Image</label>
+    <input type="file" (change)="onFileSelect($event)" class="form-control" name="image" /> -->
+
+      <button type="submit" class="btn btn-primary" (click)="saveChanges()">Save</button>
+  </div>
+  

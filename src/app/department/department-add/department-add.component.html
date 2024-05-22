@@ -1,0 +1,32 @@
+<!-- <p>department-add works!</p> -->
+<!-- <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary" (click)="showform()">Add department</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="text" class="form-control" id="id" [(ngModel)]="nstd._id">
+  </div>
+  
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="nstd.name">
+  </div>
+  <div class="form-group">
+    <select [(ngModel)]="nstd.location" class="form-control w-50">
+      <option>Alex</option>
+      <option>Smart</option>
+      <option>Mansoura</option>
+    </select>
+  
+  <button type="button" class="btn btn-primary" (click)="save()">Add</button>
+  
+</div>
+
+
+
